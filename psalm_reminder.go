@@ -8,7 +8,6 @@ import (
 	"net/http"
 	"os"
 	"strconv"
-	"strings"
 
 	"github.com/go-pg/pg"
 	"github.com/sendgrid/sendgrid-go"
@@ -48,8 +47,8 @@ func rootHandler(w http.ResponseWriter, _ *http.Request) {
 }
 
 func emailHandler(w http.ResponseWriter, r *http.Request) {
-	p := strings.Split(r.URL.Path, "/")
-	if p[1] == os.Getenv("SECRET_URL_PARAMETER") {
+	p := r.URL.Query().Get("secret")
+	if p == os.Getenv("SECRET_URL_PARAMETER") {
 		var psalmNum string
 		var esvResponse ESVResponse
 		options, _ := pg.ParseURL(os.Getenv("DATABASE_URL"))
