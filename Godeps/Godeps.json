@@ -1,0 +1,59 @@
+{
+	"ImportPath": "personal/psalm_reminder",
+	"GoVersion": "go1.9",
+	"GodepVersion": "v79",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/go-pg/pg",
+			"Comment": "v6.7.0-3-ge853c38",
+			"Rev": "e853c389ac58540f27c414b7bef75fbddfe9242d"
+		},
+		{
+			"ImportPath": "github.com/go-pg/pg/internal",
+			"Comment": "v6.7.0-3-ge853c38",
+			"Rev": "e853c389ac58540f27c414b7bef75fbddfe9242d"
+		},
+		{
+			"ImportPath": "github.com/go-pg/pg/internal/parser",
+			"Comment": "v6.7.0-3-ge853c38",
+			"Rev": "e853c389ac58540f27c414b7bef75fbddfe9242d"
+		},
+		{
+			"ImportPath": "github.com/go-pg/pg/internal/pool",
+			"Comment": "v6.7.0-3-ge853c38",
+			"Rev": "e853c389ac58540f27c414b7bef75fbddfe9242d"
+		},
+		{
+			"ImportPath": "github.com/go-pg/pg/orm",
+			"Comment": "v6.7.0-3-ge853c38",
+			"Rev": "e853c389ac58540f27c414b7bef75fbddfe9242d"
+		},
+		{
+			"ImportPath": "github.com/go-pg/pg/types",
+			"Comment": "v6.7.0-3-ge853c38",
+			"Rev": "e853c389ac58540f27c414b7bef75fbddfe9242d"
+		},
+		{
+			"ImportPath": "github.com/jinzhu/inflection",
+			"Rev": "1c35d901db3da928c72a72d8458480cc9ade058f"
+		},
+		{
+			"ImportPath": "github.com/sendgrid/rest",
+			"Comment": "v2.4.0-68-ga446149",
+			"Rev": "a44614977dc1c40d4c7cb62caeb3bd145e974e7d"
+		},
+		{
+			"ImportPath": "github.com/sendgrid/sendgrid-go",
+			"Comment": "v3.4.1-140-gfc52a74",
+			"Rev": "fc52a7486bc3733289c65bb250a4e064fe424576"
+		},
+		{
+			"ImportPath": "github.com/sendgrid/sendgrid-go/helpers/mail",
+			"Comment": "v3.4.1-140-gfc52a74",
+			"Rev": "fc52a7486bc3733289c65bb250a4e064fe424576"
+		}
+	]
+}
