@@ -90,11 +90,11 @@ func sendEmail(passage string, db *pg.DB, psalmNum string) {
 	subject := "Reminder"
 	var user1 User
 	var user2 User
-	err := db.Model(&user1).Column("users.*").Where("users.name = ?", "Graham Turner").Select()
+	err := db.Model(&user1).Column("user.*").Where("user.name = ?", "Graham Turner").Select()
 	if err != nil {
 		panic(err)
 	}
-	err = db.Model(&user2).Column("users.*").Where("users.name = ?", "Alex Lowe").Select()
+	err = db.Model(&user2).Column("user.*").Where("user.name = ?", "Alex Lowe").Select()
 	if err != nil {
 		panic(err)
 	}
