@@ -113,6 +113,10 @@ func sendEmail(passage string, db *pg.DB, psalmNum string) {
 		log.Fatal(err)
 	}
 	newPsalm = newPsalm + 1
+	newPsalm = newPsalm % 151
+	if newPsalm == 0 {
+		newPsalm = 1
+	}
 	newReading := &Reading{
 		Chapter: strconv.Itoa(newPsalm),
 	}
