@@ -109,12 +109,12 @@ func sendEmail(passage string, db *pg.DB, psalmNum string) {
 		log.Fatal(err)
 	}
 	newPsalm, err := strconv.Atoi(psalmNum)
-	if err == nil {
+	if err != nil {
 		log.Fatal(err)
 	}
 	newPsalm = newPsalm + 1
 	newReading := &Reading{
-		Chapter: string(newPsalm),
+		Chapter: strconv.Itoa(newPsalm),
 	}
 	err = db.Insert(newReading)
 	if err != nil {
