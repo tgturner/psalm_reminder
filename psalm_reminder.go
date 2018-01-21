@@ -14,7 +14,7 @@ import (
 	"github.com/sendgrid/sendgrid-go/helpers/mail"
 )
 
-type User struct {
+type Users struct {
 	Id    int64
 	Name  string
 	Email string
@@ -88,13 +88,13 @@ func emailHandler(w http.ResponseWriter, r *http.Request) {
 func sendEmail(passage string, db *pg.DB, psalmNum string) {
 	from := mail.NewEmail("Reminder", "turnertgraham@gmail.com")
 	subject := "Reminder"
-	var user1 User
-	var user2 User
-	err := db.Model(&user1).Column("user.*").Where("user.name = ?", "Graham Turner").Select()
+	var user1 Users
+	var user2 Users
+	err := db.Model(&user1).Column("users.*").Where("users.name = ?", "Graham Turner").Select()
 	if err != nil {
 		panic(err)
 	}
-	err = db.Model(&user2).Column("user.*").Where("user.name = ?", "Alex Lowe").Select()
+	err = db.Model(&user2).Column("users.*").Where("users.name = ?", "Alex Lowe").Select()
 	if err != nil {
 		panic(err)
 	}
